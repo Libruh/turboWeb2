@@ -1,0 +1,395 @@
+/* Global */
+
+*{
+  --theme-background: #141414;
+  --theme-foreground: #090909;
+  --theme-active: #202020;
+  --theme-hover: #181818;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.appWrapper{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body{
+  background-color: var(--theme-background);
+  margin: 0;
+}
+
+.appWrapper > div{
+  font-size: 18px;
+}
+
+.no_link{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+body{
+  background-color: var(--theme-background);
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+/* Navbar */
+.navbar{
+  background-color: var(--theme-foreground);
+  display: flex;
+}
+
+.logoContainer{
+  width: 45px;
+  padding: 15px 15px 5px 15px;
+}
+
+.navbar > ul.navButtons{
+  height: 100%;
+  margin-left: auto;
+  display: flex;
+  max-width: 70%;
+  overflow-x: scroll;
+}
+
+.navButtons a:first-child{
+  margin-left: 10px;
+}
+
+.navButtons li{
+  height: 100%;
+  line-height: 60px;
+  padding: 0 20px;
+  margin: 0 3px;
+  transform: skewX(-15deg);
+  cursor: pointer;
+}
+
+.navButtons li > div{
+  transform: skewX(15deg)
+}
+
+.navButtons > a.active li{
+  background-color: var(--theme-active);
+}
+
+.navButtons li:not(.active):hover{
+  background-color: var(--theme-hover);
+}
+
+
+/* Homepage */
+
+.homepage{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Home Content */
+
+.homeContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 70px;
+}
+
+.homeContent > div{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  max-width: 1250px;
+  border-radius: 15px;
+  padding: 10px;
+  margin-top: 40px; 
+  background-color: var(--theme-foreground);
+}
+.homeContent > div:last-child{ margin-bottom: 40px; }
+
+/* Tabs */
+
+.tabs{
+  display: flex;
+}
+
+.tab {
+  text-align: center;
+  padding: 10px;
+  flex-grow: 1;
+  cursor: pointer;
+  background-color: var(--theme-foreground);
+  z-index: 1;
+}
+
+.tab.placeholder{
+  height: 25px;
+  border-radius: 15px 15px 0 0;
+}
+
+.tab:hover:not(.active) {
+  background-color: var(--theme-hover);
+}
+
+.tab:first-child:not(.placeholder) {
+  border-radius: 15px 0 0 0;
+}
+
+.tab:last-child:not(.placeholder) {
+  border-radius: 0 15px 0 0;
+}
+
+.tab.active {
+  background-color: #202020;
+  z-index: 10;
+}
+
+.tabs:hover .tab:not(:hover):not(.active) {
+  background-color: var(--theme-foreground);
+}
+
+/* Playlist Viewer */
+
+.homeContent > div.playlistViewer{
+  padding: 0px;
+}
+
+.playlistViewer iframe{
+  border-radius: 0 0 15px 15px;
+  padding-bottom: 0;
+  margin-bottom: -5px;
+}
+
+.playlistViewer iframe:not(.active){
+  display: none;
+}
+
+/* Leaderboard Viewer */
+
+.homeContent > div.leaderboardViewer{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 80px;
+  padding: 0px;
+}
+
+.leaderboardViewer > .tabs{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  width: 100%;
+}
+
+.leaderboardViewer > .tabs > .tab{
+  width: 23.2%;
+  flex-grow: 0;
+}
+
+.leaderboardViewer > .top3{
+  box-sizing: border-box;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  width: 50%;
+  border-radius: 0 0 0 15px;
+  background-color: var(--theme-active);
+}
+
+/* A user in the top 3 */
+.topUser{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  --size: 100px;
+}
+
+.topUser > .avatar{
+  border-radius: 50%;
+  max-height: var(--size);
+  max-width: var(--size);
+  height: 100%;
+  width: 100%;
+}
+
+.topUser.first{
+  margin: 0 15px;
+  --size: 140px;
+}
+
+.topUser > img.crown{
+  position: absolute;
+  height: 55px;
+  margin-top: -55px;
+  transform: rotate(30deg);
+  right: -6px;
+  top: 20px;
+}
+
+.topUser > span{
+  text-align: center;
+}
+
+.topUser > .nick{
+  font-size: 120%;
+  padding-top: 5px;
+  font-weight: 400;
+}
+
+.topUser.first > .nick{
+  font-size: 140%;
+}
+
+.topUser > .votes{
+  color: #a2a2a2;
+}
+
+/* top3 Loading */
+
+.top3.loading > .topUser{
+  max-height: var(--size);
+  max-width: var(--size);
+  height: 100%;
+  width: 100%;
+}
+
+.top3.loading > .topUser > .avatar{
+  background-color: var(--theme-background);
+  animation: loading 1s infinite;
+}
+
+/* runners up */
+
+.runnersUp{
+  box-sizing: border-box;
+  height: 300px;
+  padding: 10px;
+  width: 50%;
+  overflow-y: scroll;
+  overflow-x: none;
+}
+
+.runnersUp > div{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.runnersUp > div:not(:first-child){
+  border-top: 2px solid var(--theme-background)
+}
+
+.runnersUp img.avatar{
+  border-radius: 50%;
+  height: 40px;
+}
+
+.runnersUp .nick{
+  margin-left: 15px;
+}
+
+.runnersUp > div > span:last-child{
+  margin-left: auto;
+}
+
+/* Footer */
+
+.footer{
+  margin-top: auto;
+  background-color: var(--theme-foreground);
+  display: flex;
+  justify-content: center;
+}
+
+.footer > div{
+  padding: 12px 40px;
+}
+
+.footer > div, .footer > div > a{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  grid-gap: 7px;
+  opacity: .55;
+}
+
+.madewith svg{ animation: spin 5s infinite linear }
+
+/* Animations */
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+/* Media Queries */
+
+@media only screen 
+  and (max-device-width: 950px) {
+
+    .appWrapper > div{
+      font-size: 15px;
+    }
+
+    .homeContent{
+      margin: 0 20px;
+    }
+
+    .homeContent > div.leaderboardViewer{
+      flex-direction: column;
+    }
+
+    .leaderboardViewer > .top3{
+      width: auto;
+      border-radius: 0 15px 0 0;
+    }
+
+    .leaderboardViewer > div:not(.tabs){
+      width: 100%;
+      margin-left: 0px;
+    }
+
+    .footer{
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 15px;
+    }
+
+    .footer > div{
+      padding: 1px;
+    }
+}
