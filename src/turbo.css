@@ -545,17 +545,17 @@ div.botPreview > .profile{
   justify-content: center;
 }
 
-.cover .name{
+.archive .cover .name{
   font-size: 1.75em;
   display: flex;
   align-items: center;
 }
 
-.cover .name .icon{
+.archive .cover .name .icon{
   padding-top: .2em;
 }
 
-.cover .description{
+.archive .cover .description{
   opacity: .8;
   width: 25%;
 }
@@ -625,7 +625,7 @@ div.botPreview > .profile{
   position: relative;
 }
 
-.playlist .art .cover{
+.playlist .art .spotifyCover{
   position: absolute;
   background-color: var(--theme-foreground-transparent);
   height: 100%;
@@ -641,12 +641,13 @@ div.botPreview > .profile{
   cursor: pointer;
 }
 
-.playlist .art .cover:hover{
+.playlist .art .spotifyCover:hover{
   opacity: 1;
 }
 
 .playlist .art img{
   height: 100%;
+  width: 90px;
 }
 
 .contributor{

@@ -33,7 +33,7 @@ class PlaylistViewer extends Component {
                         <div className='item'>
                             <div className="art">
                                 <a href={track.href} target="none" className='no_link'>
-                                    <div className="cover">
+                                    <div className="spotifyCover">
                                         <BsSpotify className='icon'/>
                                     </div>
                                 </a>
