@@ -480,7 +480,8 @@ div.botPreview > .profile{
   justify-content: center;
   grid-gap: 15px;
 
-  margin: 0 70px;
+  margin: 0 auto;
+  padding: 0 70px;
   margin-top: 85px;
   margin-bottom: 40px;
   max-width: 1250px;
