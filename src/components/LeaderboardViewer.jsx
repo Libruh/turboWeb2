@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getLeaderboard } from '../turboAPI';
+import { getLeaderboard } from '../API/turboAPI';
 import Crown from '../img/crown.svg'
 
 class LeaderboardViewer extends Component {
@@ -36,7 +36,6 @@ class LeaderboardViewer extends Component {
         this.setState({
             activeLeaderboard: leaderboard
         })
-        console.log(this.state);
     }
 
     getActive(className, leaderboard){
@@ -78,7 +77,7 @@ class LeaderboardViewer extends Component {
             {/* AlltimeLeaderboard */}
             <div className="top3">
                 {this.state.leaderboards[this.state.activeLeaderboard].slice(0,3).map((user, i) =>
-                    <div className={`topUser ${i === 1 ? 'first' : null}`}>
+                    <div className={`topUser ${i === 1 ? 'first' : ''}`}>
                         {i === 1 ? <img src={Crown} className="crown" alt="crown"/> : null}
                         <img src={user['avatar']} className = "avatar" alt="" />
                         <span className="nick">{user['nick']}</span>

@@ -1,0 +1,27 @@
+{
+    "754861186230649063": {
+        "description": "The Turbo Music Bot started as a small tool to automatically take Spotify links sent to the discord #music channel into a Spotify playlist. Over time, it became something much bigger. A place to share, discover, rate, and discuss music.",
+        "buttons": {
+            "code": {
+                "url": "https://github.com/Libruh/turboBot",
+                "color": "#333"
+            }
+        }
+    },
+    "974129951907397642": {
+        "description": "Computer Boy is an AI powered bot that generates a nickname for a user based on the introduction they post. It was written using the Co:here AI platform.",
+        "buttons": {
+            "invite": {
+                "url": "https://discord.com/oauth2/authorize?client_id=974129951907397642&permissions=201336832&response_type=code&scope=bot",
+                "color": "#5865F2"
+            },
+            "code": {
+                "url": "https://github.com/Libruh/Nicknamer",
+                "color": "#333"
+            }
+        }
+    },
+    "981309415313530940": {
+        "description": "Pride Kid is a modified version of the music bot, written to facilitate the Good Kid Street Team Pride 2022 event. During the event, users would submit songs by LGBTQ+ artists to a special thread. The bot would then add them to a playlist and grant the user a special role."
+    }
+}

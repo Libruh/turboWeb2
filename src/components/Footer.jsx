@@ -3,7 +3,7 @@ import { FaGithubAlt, FaDiscord, FaReact } from 'react-icons/fa';
 
 class Footer extends Component {
     render() {
-        return ( 
+        return (
             <div className="footer">
                 <div className="madewith">
                     <a href="https://github.com/Libruh/turboWeb2" className="no_link" target="none">
@@ -16,7 +16,7 @@ class Footer extends Component {
                     </a>
                 </div>
                 <div className="joindiscord">
-                    <a href="https://discord.gg/eGaVZKg" className="no_link" target="none">
+                    <a href="https://discord.gg/F4rTukm5ts" className="no_link" target="none">
                         <div>Discord</div> <FaDiscord size="1.2em"/>
                     </a>
                 </div>

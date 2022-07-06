@@ -11,7 +11,7 @@ class Navbar extends Component {
     async componentDidMount(){ 
         const locations = {
             "Home": "/home",
-            "About": "/about",
+            "Projects": "/projects",
             "Archive": "/archive"
         }
     
@@ -30,7 +30,7 @@ class Navbar extends Component {
                     <div className="logoContainer"><img src={TurboLogo} className="logo" alt="Turbo AF Logo" /></div>
                     <ul className="navButtons">
                         {Object.keys(this.state.locations).map((location) =>
-                            <NavLink className="no_link" to={this.state.locations[location]}>
+                            <NavLink key={location} className="no_link" to={this.state.locations[location]}>
                                 <li><div>{location}</div></li>
                             </NavLink>
                         )}
