@@ -525,8 +525,9 @@ div.botPreview > .profile{
 }
 
 .archive .current .mosaic img{
-  width: 100%;
-  max-width: 8.333%;
+  width: 8.333%;
+  height: auto;
+  background-color: var(--theme-foreground);
 }
 
 .archive .current .cover{
@@ -558,7 +559,8 @@ div.botPreview > .profile{
 
 .archive .cover .description{
   opacity: .8;
-  width: 25%;
+  max-width: 25%;
+  white-space: normal;
 }
 
 /* normal playlist links */
@@ -569,6 +571,12 @@ div.botPreview > .profile{
   overflow: hidden;
   cursor: pointer;
   transition: transform .1s;
+
+  width: 270px;
+  height: auto;
+  min-height: 270px;
+
+  background-image: var(--theme-foreground);
 }
 
 .archive .playlist img{
@@ -827,6 +835,7 @@ div.botPreview > .profile{
     /* Archive */
 
     .archive{
+      padding: 0 20px;
     }
 
     .archive .current .mosaic > div:nth-child(n+3){
@@ -834,7 +843,7 @@ div.botPreview > .profile{
     }
 
     .archive .current .mosaic img{
-      max-width: 25%;
+      width: 25%;
     }
 
     .archive .current .cover{
