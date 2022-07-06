@@ -838,8 +838,12 @@ div.botPreview > .profile{
       padding: 0 20px;
     }
 
-    .archive .current .mosaic > div:nth-child(n+3){
+    .archive .current .mosaic > div:nth-child(n+4){
       display: none;
+    }
+
+    .archive .current .description{
+      max-width: 50%;
     }
 
     .archive .current .mosaic img{
@@ -854,6 +858,7 @@ div.botPreview > .profile{
 
     .archive .playlist{
       width: calc( 50% - 15px );
+      min-height: 158px;
     }
 
     .cover .description{

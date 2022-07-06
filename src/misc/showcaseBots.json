@@ -1,6 +1,6 @@
 {
     "754861186230649063": {
-        "description": "The Turbo Music Bot started as a small tool to automatically take Spotify links sent to the discord #music channel into a Spotify playlist. Over time, it became something much bigger. A place to share, discover, rate, and discuss music.",
+        "description": "The Turbo Music Bot started as a small tool to automatically insert Spotify links sent to the discord #music channel into a Spotify playlist. Over time, it became something much bigger. A place to share, discover, rate, and discuss music.",
         "buttons": {
             "code": {
                 "url": "https://github.com/Libruh/turboBot",
