@@ -564,12 +564,10 @@ div.botPreview > .profile{
 
 .archive .playlist{
   position: relative;
-  width: 212px;
-  height: 212px;
+  width: calc( 20% - 15px );
   overflow: hidden;
   cursor: pointer;
   transition: transform .1s;
-  background-color: var(--theme-foreground);
 }
 
 .archive .playlist img{
@@ -827,7 +825,6 @@ div.botPreview > .profile{
     /* Archive */
 
     .archive{
-      grid-gap: 8px;
     }
 
     .archive .current .mosaic > div:nth-child(n+3){
@@ -844,7 +841,7 @@ div.botPreview > .profile{
       font-size: 80%;
     }
 
-    .archive .playlist img{
+    .archive .playlist{
       width: calc( 50% - 15px );
     }
 
