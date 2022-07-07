@@ -18,7 +18,7 @@ class PlaylistViewer extends Component {
 
     async componentDidMount(){ 
         const playlistDate = this.props.params.playlistDate
-        const playlist = await getPlaylist(playlistDate)
+        const playlist = await getPlaylist(playlistDate, "date", "reverse")
 
         this.setState({
             isLoading: false,
