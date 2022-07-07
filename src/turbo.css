@@ -650,6 +650,7 @@ div.botPreview > .profile{
   flex-direction: column;
   margin-left: 10px;
   padding: 10px 0;
+  flex-grow: 1;
 }
 
 .playlistViewer > .item .artist{
@@ -657,7 +658,7 @@ div.botPreview > .profile{
 }
 
 .playlistViewer > .item span{
-  max-width: 200px;
+  max-width: 75%;
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
