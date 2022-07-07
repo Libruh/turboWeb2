@@ -14,10 +14,19 @@ export async function getThumbnail(date){
     return data
 }
 
-export async function getPlaylist(date){
+export async function getPlaylist(date, sort=undefined, direction=undefined){
+    let url = APIhostname+'/playlists/'+date;
+
+    if (sort) {
+        url = url+"?sort="+sort
+        if (direction) {
+            url = url+"&direction="+direction
+        }
+    }
+
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists/'+date,
+        url: url,
         headers: {"Access-Control-Allow-Origin": "*"}
     }).catch( err => {
     });

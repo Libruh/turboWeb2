@@ -609,7 +609,33 @@ div.botPreview > .profile{
 
 /* Playlist Viewer */
 
-.playlist > .item{
+.playlistViewer{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* sort by menu */
+
+.playlistViewer > .sortby{
+  margin: 20px 20px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  grid-gap: 10px;
+}
+
+.playlistViewer > .sortby > div{
+  cursor: pointer;
+}
+
+.playlistViewer > .sortby > div.fetching{
+  opacity: .5;
+  cursor: initial;
+  pointer-events: none;
+}
+
+/* items */
+
+.playlistViewer > .item{
   background-color: var(--theme-foreground);
   margin-top: 10px;
   overflow: hidden;
@@ -618,7 +644,7 @@ div.botPreview > .profile{
   max-height: 90px;
 }
 
-.playlist > .item > .info{
+.playlistViewer > .item > .info{
   display: flex;
   grid-gap: 2px;
   flex-direction: column;
@@ -626,15 +652,22 @@ div.botPreview > .profile{
   padding: 10px 0;
 }
 
-.playlist > .item .artist{
+.playlistViewer > .item .artist{
   opacity: .7;
 }
 
-.playlist .art{
+.playlistViewer > .item span{
+  max-width: 200px;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlistViewer .art{
   position: relative;
 }
 
-.playlist .art .spotifyCover{
+.playlistViewer .art .spotifyCover{
   position: absolute;
   background-color: var(--theme-foreground-transparent);
   height: 100%;
@@ -650,11 +683,11 @@ div.botPreview > .profile{
   cursor: pointer;
 }
 
-.playlist .art .spotifyCover:hover{
+.playlistViewer .art .spotifyCover:hover{
   opacity: 1;
 }
 
-.playlist .art img{
+.playlistViewer .art img{
   height: 100%;
   width: 90px;
 }
@@ -669,6 +702,16 @@ div.botPreview > .profile{
 .contributor > img{
   height: 28px;
   border-radius: 50%;
+}
+
+/* playlist item when fetching */
+
+.playlistViewer > .item > *{
+  transition: opacity .2s;
+}
+
+.playlistViewer > .item.fetching > *{
+  opacity: 0;
 }
 
 /* Footer */
