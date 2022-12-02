@@ -10,6 +10,7 @@ import Dev from './pages/dev';
 import Projects from './pages/projects';
 import Archive from './pages/archive';
 import PlaylistViewer from './pages/PlaylistViewer'
+import SecretSanta from './pages/SecretSanta';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/archive/:playlistDate" element={<PlaylistViewer/>}/>
         <Route exact path="/projects" element={<Projects/>}/>
         <Route exact path="/dev" element={<Dev/>}/>
+        <Route exact path="/santa" element={<SecretSanta/>}/>
         <Route exact path="/" element={<Navigate to='/home' />}/>
         <Route exact path="/404" element={<Navigate to='/home' />}/>
         <Route path="*" element={<Navigate to='/404' />}/>
