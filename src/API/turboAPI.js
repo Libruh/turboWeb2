@@ -1,12 +1,11 @@
 const axios = require('axios')
 
-const APIhostname = 'https://turboaf.net:5039/api'
+const APIhostname = 'https://turboaf.net/api'
 
 export async function getThumbnail(date){
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists/'+date+'/thumbnail',
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/playlists/'+date+'/thumbnail'
     }).catch( err => {
     });
 
@@ -26,8 +25,7 @@ export async function getPlaylist(date, sort=undefined, direction=undefined){
 
     const result = await axios({
         method: 'get',
-        url: url,
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: url
     }).catch( err => {
     });
 
@@ -38,8 +36,7 @@ export async function getPlaylist(date, sort=undefined, direction=undefined){
 export async function getPlaylists(){
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists',
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/playlists'
     }).catch( err => {
     });
 
@@ -50,8 +47,7 @@ export async function getPlaylists(){
 export async function getSeasons(){
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists/seasons',
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/playlists/seasons'
     }).catch( err => {
     });
 
@@ -66,8 +62,7 @@ export async function getUsers(userIds){
 
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/users/discord/'+userIds,
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/users/discord/'+userIds
     }).catch( err => {
     });
 
@@ -79,8 +74,7 @@ export async function getUsers(userIds){
 export async function getPlaylistData(playlistID){
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists/spotify/'+playlistID,
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/playlists/spotify/'+playlistID
     }).catch( err => {
     });
 
@@ -91,8 +85,7 @@ export async function getPlaylistData(playlistID){
 export async function getArchive(){
     const result = await axios({
         method: 'get',
-        url: APIhostname+'/playlists/',
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: APIhostname+'/playlists/'
     }).catch( err => {
     });
 
@@ -104,7 +97,6 @@ export async function changeVote(trackID, mode){
     const result = await axios({
         method: 'put',
         url: APIhostname+'/tracks/votes',
-        headers: {"Access-Control-Allow-Origin": "*"},
         data: {
             trackID: trackID,
             mode: mode
@@ -113,23 +105,11 @@ export async function changeVote(trackID, mode){
     });
 }
 
-export async function getEvents(){
-    const result = await axios({
-        method: 'get',
-        url: APIhostname+'/events',
-        headers: {"Access-Control-Allow-Origin": "*"}
-    }).catch( err => {
-    });
-
-    const data = result.data
-    return data
-}
 
 export async function submitSanta(obj){
     const result = await axios({
         method: 'put',
-        url: APIhostname+'/events/santas',
-        headers: {"Access-Control-Allow-Origin": "*"},
+        url: APIhostname+'/santa',
         data: {
             santaObj: JSON.stringify(obj),
         }
@@ -142,8 +122,7 @@ export async function getLeaderboard(season = undefined){
 
     const result = await axios({
         method: 'get',
-        url: url,
-        headers: {"Access-Control-Allow-Origin": "*"}
+        url: url
     }).catch( err => {
     });
 
