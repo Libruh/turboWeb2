@@ -776,6 +776,7 @@ div.botPreview > .profile{
 .ssForm input, .ssForm textarea{
   width: 100%;
   max-width: 300px;
+  padding: 5px 5px;
 }
 
 .ssForm .unfilledWarning{
@@ -789,6 +790,11 @@ div.botPreview > .profile{
   font-size: 110%;
   padding: 10px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.ssForm button:hover{
+  background-color: var(--theme-hover);
 }
 
 .ssForm input, .ssForm textarea, .ssForm select{
@@ -799,7 +805,7 @@ div.botPreview > .profile{
 }
 
 .ssForm select{
-  width: 120px;
+  width: 200px;
 }
 
 .ssForm .chunk{
@@ -814,6 +820,12 @@ div.botPreview > .profile{
 .santalogo{
   max-width: 150px;
   margin: auto;
+}
+
+.santaPage .submitted{
+  text-align: center;
+  font-size: 140%;
+  width: 300px;
 }
 
 /* Animations */
